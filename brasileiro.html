@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Classificação Brasileirão 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      padding: 30px;
+      margin: 0;
+    }
+
+	h1 {
+	  text-align: center;
+	  font-family: 'Bebas Neue', sans-serif;
+	  font-size: 4.5rem;
+	  letter-spacing: 4px;
+	  margin: 30px 0;
+	  text-transform: uppercase;
+	  position: relative;
+	  background: linear-gradient(45deg, #00b300, #ffd700, #009c3b, #002776);
+	  -webkit-background-clip: text;
+	  background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+	  animation: title-glow 2s ease-in-out infinite alternate;
+	}
+
+	h1::after {
+	  content: "";
+	  position: absolute;
+	  bottom: -10px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  width: 200px;
+	  height: 3px;
+	  background: linear-gradient(90deg, transparent, #ffd700, transparent);
+	}
+
+	@keyframes title-glow {
+	  0% { filter: drop-shadow(0 0 5px rgba(255,215,0,0.3)); }
+	  100% { filter: drop-shadow(0 0 15px rgba(255,215,0,0.6)); }
+	}
+
+    table {
+      width: 80%;
+      margin: 0 auto 30px auto;
+      border-collapse: collapse;
+      background-color: #1e1e1e;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      color: #e0e0e0;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #333;
+    }
+
+    th {
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+    }
+
+    tr {
+      border-left: 6px solid transparent;
+    }
+
+    tr:nth-child(even) {
+      background-color: #1a1a1a;
+    }
+
+    /* Classificações */
+    .campeao.libertadores {
+      border-left: 6px solid gold;
+      font-weight: bold;
+    }
+
+    .libertadores {
+      border-left: 6px solid #00bfff;
+    }
+
+    .pre-libertadores {
+      border-left: 6px solid #aa66cc;
+    }
+
+    .sul-americana {
+      border-left: 6px solid #66cc66;
+    }
+
+    .rebaixado {
+      border-left: 6px solid red;
+    }
+
+    .comentario {
+      font-style: italic;
+      color: #bbb;
+      font-size: 0.9em;
+    }
+
+    .time-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .time-info img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .posicao {
+      width: 25px;
+      display: inline-block;
+    }
+	  tr {
+    transition: all 0.2s ease;
+    position: relative; /* Necessário para o efeito de overlay */
+    }
+
+	tr:hover {
+	background-color: rgba(255, 255, 255, 0.05) !important;
+	cursor: pointer;
+	}
+
+	/* Efeito de overlay transparente */
+	tr:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.03);
+	pointer-events: none;
+	}
+
+    .legenda {
+      width: 80%;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      color: #e0e0e0;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
+
+    .legenda strong {
+      display: block;
+      margin-bottom: 15px; /* Aumentei o espaçamento */
+      font-size: 1.1em;
+    }
+
+    .legenda-item {
+      display: flex;
+      align-items: center;
+      gap: 12px; /* Aumentei o espaçamento entre quadrado e texto */
+      padding: 4px 0; /* Adicionei padding vertical */
+    }
+
+    .legenda span {
+      width: 16px; /* Aumentei o tamanho */
+      height: 16px; /* Aumentei o tamanho */
+      display: inline-block;
+      border-radius: 3px;
+      flex-shrink: 0; /* Impede que o quadrado diminua */
+    }
+
+    .libertadores-color { background-color: #00bfff; }
+    .pre-libertadores-color { background-color: #aa66cc; }
+    .sul-americana-color { background-color: #66cc66; }
+    .rebaixado-color { background-color: red; }
+
+  </style>
+</head>
+<body>
+
+  <h1>#BRASILEIRÃO 2025#</h1>
+
+  <table>
+    <tr>
+      <th>Clube</th>
+      <th>Observação</th>
+    </tr>
+    <tr class="campeao libertadores">
+      <td><div class="time-info"><span class="posicao">1</span><img src="https://logodetimes.com/times/flamengo/logo-flamengo-256.png" alt="Flamengo">Flamengo</div></td>
+      <td class="comentario">Campeão</td>
+    </tr>
+    <tr class="libertadores">
+      <td><div class="time-info"><span class="posicao">2</span><img src="https://logodetimes.com/times/internacional/logo-internacional-256.png" alt="Internacional">Internacional</div></td>
+      <td></td>
+    </tr>
+    <tr class="libertadores">
+      <td><div class="time-info"><span class="posicao">3</span><img src="https://logodetimes.com/times/botafogo/logo-botafogo-256.png" alt="Botafogo">Botafogo</div></td>
+      <td class="comentario">Campeão se roubarem mais que 20% dos jogos</td>
+    </tr>
+    <tr class="libertadores">
+      <td><div class="time-info"><span class="posicao">4</span><img src="https://logodetimes.com/times/atletico-mineiro/logo-atletico-mineiro-256.png" alt="Atlético MG">Atlético MG</div></td>
+      <td></td>
+    </tr>
+    <tr class="pre-libertadores">
+      <td><div class="time-info"><span class="posicao">5</span><img src="https://logodetimes.com/times/corinthians/logo-corinthians-256.png" alt="Corinthians">Corinthians</div></td>
+      <td></td>
+    </tr>
+    <tr class="pre-libertadores">
+      <td><div class="time-info"><span class="posicao">6</span><img src="https://logodetimes.com/times/palmeiras/logo-palmeiras-256.png" alt="Palmeiras">Palmeiras</div></td>
+	  <td class="comentario">TIME do VAR - Campeão se roubarem descaradamente</td>
+    </tr>
+    <tr class="sul-americana">
+      <td><div class="time-info"><span class="posicao">7</span><img src="https://logodetimes.com/times/sao-paulo/logo-sao-paulo-256.png" alt="São Paulo">São Paulo</div></td>
+      <td></td>
+    </tr>
+    <tr class="sul-americana">
+      <td><div class="time-info"><span class="posicao">8</span><img src="https://logodetimes.com/times/fortaleza/logo-fortaleza-256.png" alt="Fortaleza">Fortaleza</div></td>
+      <td></td>
+    </tr>
+    <tr class="sul-americana">
+      <td><div class="time-info"><span class="posicao">9</span><img src="https://logodetimes.com/times/gremio/logo-gremio-256.png" alt="Grêmio">Grêmio</div></td>
+      <td></td>
+    </tr>
+    <tr class="sul-americana">
+      <td><div class="time-info"><span class="posicao">10</span><img src="https://logodetimes.com/times/bahia/logo-bahia-256.png" alt="Bahia">Bahia</div></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><div class="time-info"><span class="posicao">11</span><img src="https://logodetimes.com/times/cruzeiro/logo-cruzeiro-256.png" alt="Cruzeiro">Cruzeiro</div></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><div class="time-info"><span class="posicao">12</span><img src="https://logodetimes.com/times/santos/logo-santos-256.png" alt="Santos">Santos</div></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><div class="time-info"><span class="posicao">13</span><img src="https://logodetimes.com/times/ceara/logo-ceara-256.png" alt="Ceará">Ceará</div></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><div class="time-info"><span class="posicao">14</span><img src="https://logodetimes.com/times/fluminense/logo-fluminense-256.png" alt="Fluminense">Fluminense</div></td>
+      <td></td>
+    </tr>
+	<tr>
+	  <td><div class="time-info"><span class="posicao">15</span><img src="https://logodetimes.com/times/vasco-da-gama/logo-vasco-da-gama-4096.png" alt="Vasco">Vasco</div></td>
+	  <td></td>
+	</tr>
+    <tr>
+      <td><div class="time-info"><span class="posicao">16</span><img src="https://logodetimes.com/times/juventude/logo-juventude-256.png" alt="Juventude">Juventude</div></td>
+      <td></td>
+    </tr>
+    <tr class="rebaixado">
+      <td><div class="time-info"><span class="posicao">17</span><img src="https://logodetimes.com/times/red-bull-bragantino/logo-red-bull-bragantino-4096.png" alt="Bragantino">RB Bragantino</div></td>
+      <td></td>
+    </tr>
+    <tr class="rebaixado">
+      <td><div class="time-info"><span class="posicao">18</span><img src="https://logodetimes.com/times/vitoria/logo-vitoria-256.png" alt="Vitória">Vitória</div></td>
+      <td></td>
+    </tr>
+    <tr class="rebaixado">
+      <td><div class="time-info"><span class="posicao">19</span><img src="https://logodetimes.com/times/mirassol/logo-mirassol-256.png" alt="Mirassol">Mirassol</div></td>
+      <td></td>
+    </tr>
+    <tr class="rebaixado">
+      <td><div class="time-info"><span class="posicao">20</span><img src="https://logodetimes.com/times/sport-recife/logo-sport-recife-256.png" alt="Sport">Sport Recife</div></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <div class="legenda">
+    <strong>Qualificação / Rebaixamento</strong>
+    <div>
+      <div class="legenda-item"><span class="libertadores-color"></span> Fase de grupos da CONMEBOL Libertadores</div>
+      <div class="legenda-item"><span class="pre-libertadores-color"></span> Qualificatórias da CONMEBOL Libertadores</div>
+      <div class="legenda-item"><span class="sul-americana-color"></span> Fase de grupos da CONMEBOL Sudamericana</div>
+      <div class="legenda-item"><span class="rebaixado-color"></span> Rebaixamento</div>
+    </div>
+  </div>
+
+</body>
+</html>
